@@ -1,29 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, Dimensions, SafeAreaView} from 'react-native';
 
 
-export default function App() {
+export default function SideBar() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.navIcon}>
        <ImageBackground 
        style={styles.icon}
-       source={require('./src/assets/img/QR.png')}
+       source={require('../../assets/img/QR.png')}
        >
        </ImageBackground>
 
        <ImageBackground 
        resizeMode="contain" 
        style={styles.icon}
-       source={require('./src/assets/img/Heart.png')}
+       source={require('../../assets/img/Heart.png')}
        >
        </ImageBackground>
 
        <ImageBackground
        resizeMode="contain" 
        style={styles.icon}
-       source={require('./src/assets/img/Sacola.png')}
+       source={require('../../assets/img/Sacola.png')}
        >
        </ImageBackground>
 
@@ -33,7 +32,7 @@ export default function App() {
         <ImageBackground
         resizeMode="contain"
         style={styles.menuPrint}
-        source={require('./src/assets/img/menu_print.png')}
+        source={require('../../assets/img/menu_print.png')}
         >
 
         </ImageBackground>
