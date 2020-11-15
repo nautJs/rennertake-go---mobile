@@ -30,7 +30,7 @@ export default function Header({ title, showCancel = true}) {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 24,
+        padding: 12,
         backgroundColor: '#f9fafc',
         borderBottomWidth: 2,
         borderColor: '#F1F1F1',
@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'Lato_700Bold',
         color: '#00AE7C',
-        fontSize: 22
+        fontSize: 22,
     }
 })
