@@ -6,13 +6,13 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-export default function Header({ title, showCancel = true}) {
+export default function Header({ title, showCancel = true, headerTransparent = false}) {
     const navigation = useNavigation();
     function handleGoBackToAppHomepage() {
         navigation.navigate('HomePage');
     }
     return (
-        <View style={styles.container}>
+        <View style={{ ...styles.container, backgroundColor: !headerTransparent && '#f9fafc'} }>
             <BorderlessButton onPress={navigation.goBack}>
                 <Feather name="arrow-left" size={24} color="#000000"/>
             </BorderlessButton>
@@ -31,7 +31,6 @@ export default function Header({ title, showCancel = true}) {
 const styles = StyleSheet.create({
     container: {
         padding: 12,
-        backgroundColor: '#f9fafc',
         borderBottomWidth: 2,
         borderColor: '#F1F1F1',
         paddingTop: 44,
