@@ -11,7 +11,9 @@ import { Lato_100Thin,
   Lato_700Bold,
   Lato_700Bold_Italic,
   Lato_900Black,
-  Lato_900Black_Italic } from '@expo-google-fonts/lato'
+  Lato_900Black_Italic } from '@expo-google-fonts/lato';
+
+import TabNav from './src/components/TabNav'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +30,11 @@ export default function App() {
   })
 
   if (!fontsLoaded) {
-    return <Text>Loading...</Text>
+    return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+     <Text>Loading...</Text>
+    </View>
+    )
   }
 
   return (

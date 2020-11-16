@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const stylesItem = StyleSheet.create({
-  Container: {
+  container: {
     flex: 1,
     flexDirection: 'row',
     marginTop: 20,
@@ -11,23 +11,20 @@ export const stylesItem = StyleSheet.create({
     paddingBottom: 20,
   },
 
-  ContainerInfo: {
+  containerInfo: {
     flex: 1,
     marginLeft: 20,
     marginTop: 10,
   },
 
-  Brand: {
-    marginBottom: 10,
-  },
 
-  Name: {
+  name: {
     color: '#000',
     fontSize: 15,
     fontFamily: 'Lato_400Regular',
   },
 
-  ButtonColor: {
+  buttonColor: {
     marginTop: 20,
 
     width: 120,
@@ -39,7 +36,7 @@ export const stylesItem = StyleSheet.create({
 
   },
 
-  TextButtonColor: {
+  textButtonColor: {
     fontFamily: 'Lato_300Light',
     fontSize: 15,
     lineHeight: 18,
@@ -51,14 +48,14 @@ export const stylesItem = StyleSheet.create({
 
 
 export const stylesNotItem = StyleSheet.create({
-  Container: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFF',
   },
 
-  ContainerText: {
+  containerText: {
     justifyContent: 'center',
     alignItems: 'center',
 
@@ -70,7 +67,7 @@ export const stylesNotItem = StyleSheet.create({
     margin: 20
   },
 
-  Text: {
+  text: {
     fontFamily: 'Lato_300Light',
     fontSize: 50,
     textAlign: 'center',
@@ -78,7 +75,7 @@ export const stylesNotItem = StyleSheet.create({
     lineHeight: 60,
   },
 
-  ContainerButton: {
+  containerButton: {
     marginTop: 30,
     backgroundColor: '#000',
     width: 300,
@@ -87,7 +84,7 @@ export const stylesNotItem = StyleSheet.create({
 
   },
 
-  TextButton: {
+  textButton: {
     textAlign: 'center',
     color: '#FFF',
     fontWeight: '600',

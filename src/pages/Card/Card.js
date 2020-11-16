@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
-import { Alert, Modal, TouchableHighlight ,StyleSheet, Text, View, ImageBackground, StatusBar, SafeAreaView, FlatList, Image, TouchableOpacity } from 'react-native';
+import {
+  Alert,
+  Modal,
+  TouchableHighlight ,
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  StatusBar,
+  SafeAreaView,
+  FlatList,
+  Image,
+  TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import MyPopup from './Popup';
 
 
@@ -61,6 +74,11 @@ export default function Card() {
       />
     );
   };
+  const navigation = useNavigation();
+  function handleConfirmClick() {
+    setModalVisible(!modalVisible)
+    navigation.navigate('Confirm')
+  }
 
 
   return (
@@ -119,9 +137,7 @@ export default function Card() {
           </TouchableHighlight>
     <TouchableHighlight
               style={{ ...styles.confirmButton }}
-              onPress={() => {
-                setModalVisible(!modalVisible);
-              }}>
+              onPress={handleConfirmClick}>
               <Text style={styles.cancelText}>CONFIRMAR</Text>
     </TouchableHighlight>
     </View>

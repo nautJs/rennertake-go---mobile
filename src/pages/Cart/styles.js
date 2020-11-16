@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const stylesItem = StyleSheet.create({
-  Container: {
+  container: {
     flex: 1,
     flexDirection: 'row',
     marginTop: 20,
@@ -11,23 +11,23 @@ export const stylesItem = StyleSheet.create({
     paddingBottom: 20,
   },
 
-  ContainerInfo: {
+  containerInfo: {
     flex: 1,
     marginLeft: 20,
     marginTop: 10,
   },
 
-  Brand: {
+  brand: {
     marginBottom: 10,
   },
 
-  Name: {
+  name: {
     color: '#000',
     fontSize: 15,
     fontFamily: 'Lato_400Regular',
   },
 
-  ButtonColor: {
+  buttonColor: {
     marginTop: 20,
 
     width: 120,
@@ -39,14 +39,14 @@ export const stylesItem = StyleSheet.create({
 
   },
 
-  TextButtonColor: {
+  textButtonColor: {
     fontFamily: 'Lato_300Light',
     fontSize: 15,
     lineHeight: 18,
     color: '#000',
   },
 
-  ContainerNumber: {
+  containerNumber: {
     backgroundColor: '#E5E5E5',
     justifyContent: 'center',
     alignItems: 'center',
@@ -54,7 +54,7 @@ export const stylesItem = StyleSheet.create({
     width: 41,
   },
 
-  ContentNumber: {
+  contentNumber: {
     flex: 1,
 
     flexDirection: 'row',
@@ -62,13 +62,13 @@ export const stylesItem = StyleSheet.create({
     justifyContent: 'space-between'
   },
 
-  NumberText: {
+  numberText: {
     fontSize: 15,
     fontFamily: 'Lato_400Regular',
     color: '#000'
   },
 
-  ContainerAmount: {
+  containerAmount: {
     justifyContent: 'center',
     alignItems: 'center',
     height: 33,
@@ -77,59 +77,56 @@ export const stylesItem = StyleSheet.create({
     marginLeft: 10,
   },
 
-  AmountText: {
+  amountText: {
     color: '#000',
     fontFamily: 'Lato_400Regular',
     fontSize: 15,
   },
 
-  Prize: {
+  prize: {
     fontFamily: 'Lato_400Regular',
     color: '#000',
-    fontWeight: 'bold',
 
   }
 
 });
 
 export const stylesWithItem = StyleSheet.create({
-  Container: {
+  container: {
     flex: 1,
     backgroundColor: '#FFF',
   },
 
-  Footer: {
+  footer: {
     flex: 1,
     justifyContent: 'flex-end'
   },
 
-  ContentFooter: {
+  contentFooter: {
     flexDirection: 'column',
     paddingHorizontal: 15,
     marginBottom: 15,
   },
 
-  TableFlex: {
+  tableFlex: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
 
-  TextTotal: {
+  textTotal: {
     fontFamily: 'Lato_400Regular',
     fontSize: 12,
     color: '#000',
-    fontWeight: '400',
   },
 
-  PrizeTotal: {
+  prizeTotal: {
     fontFamily: 'Lato_700Bold',
-    fontWeight: '700',
     fontSize: 20,
     color: '#000',
   },
 
-  ButtonOneClick: {
+  buttonOneClick: {
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
@@ -137,40 +134,37 @@ export const stylesWithItem = StyleSheet.create({
     height: 49,
   },
 
-  ButtonOneClickText: {
+  buttonOneClickText: {
     fontFamily: 'Lato_300Light',
-    fontWeight: '300',
     fontSize: 15,
     color: '#000',
     paddingHorizontal: 15,
     paddingVertical: 10,
   },
 
-  TextCardDivi: {
+  textCardDivi: {
     fontFamily: 'Lato_300Light',
     fontSize: 18,
   },
 
-  TextCardDiviStrong: {
+  textCardDiviStrong: {
     fontFamily: 'Lato_700Bold',
-    fontWeight: 'bold'
   },
 
-  TextCardDesc: {
+  textCardDesc: {
     fontFamily: 'Lato_300Light',
     fontSize: 15,
   },
 
-  ButtonFinishBuy: {
+  buttonFinishBuy: {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#00AE7C',
     height: 49,
   },
 
-  TextButtonFinish: {
+  textButtonFinish: {
     fontFamily: 'Lato_300Light',
-    fontWeight: '300',
     fontSize: 15,
     color: '#FFF',
     paddingHorizontal: 20,
@@ -180,28 +174,28 @@ export const stylesWithItem = StyleSheet.create({
 });
 
 export const stylesNotItem = StyleSheet.create({
-  Container: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFF',
   },
 
-  ContainerText: {
+  containerText: {
     justifyContent: 'center',
     alignItems: 'center',
 
   },
 
-  Text: {
+  text: {
     fontFamily: 'Lato_300Light',
     fontSize: 50,
     textAlign: 'center',
-    fontWeight: '300',
+    fontFamily: 'Lato_400Regular',
     lineHeight: 60,
   },
 
-  ContainerButton: {
+  containerButton: {
     marginTop: 30,
     backgroundColor: '#000',
     paddingVertical: 15,
@@ -209,9 +203,9 @@ export const stylesNotItem = StyleSheet.create({
 
   },
 
-  TextButton: {
+  textButton: {
     color: '#FFF',
-    fontWeight: '600',
+    fontFamily: 'Lato_400Regular',
     lineHeight: 26,
     fontSize: 22,
   },
