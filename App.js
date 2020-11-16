@@ -1,72 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, Dimensions, SafeAreaView} from 'react-native';
+import Routes from './src/routes/routes';
+import { useFonts } from 'expo-font';
+import { Lato_100Thin,
+  Lato_100Thin_Italic,
+  Lato_300Light,
+  Lato_300Light_Italic,
+  Lato_400Regular,
+  Lato_400Regular_Italic,
+  Lato_700Bold,
+  Lato_700Bold_Italic,
+  Lato_900Black,
+  Lato_900Black_Italic } from '@expo-google-fonts/lato';
 
+import TabNav from './src/components/TabNav'
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Lato_100Thin,
+    Lato_100Thin_Italic,
+    Lato_300Light,
+    Lato_300Light_Italic,
+    Lato_400Regular,
+    Lato_400Regular_Italic,
+    Lato_700Bold,
+    Lato_700Bold_Italic,
+    Lato_900Black,
+    Lato_900Black_Italic
+  })
+
+  if (!fontsLoaded) {
+    return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+     <Text>Loading...</Text>
+    </View>
+    )
+  }
+
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.navIcon}>
-       <ImageBackground 
-       style={styles.icon}
-       source={require('./src/assets/img/QR.png')}
-       >
-       </ImageBackground>
-
-       <ImageBackground 
-       resizeMode="contain" 
-       style={styles.icon}
-       source={require('./src/assets/img/Heart.png')}
-       >
-       </ImageBackground>
-
-       <ImageBackground
-       resizeMode="contain" 
-       style={styles.icon}
-       source={require('./src/assets/img/Sacola.png')}
-       >
-       </ImageBackground>
-
-      </View>
-
-       <View style={styles.container}>
-        <ImageBackground
-        resizeMode="contain"
-        style={styles.menuPrint}
-        source={require('./src/assets/img/menu_print.png')}
-        >
-
-        </ImageBackground>
-
-       </View>
-       
-    </SafeAreaView>
-    
+    <Routes/>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    //justifyContent: "flex-end",
-  },
 
-  navIcon: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-  },
-
-  icon: {
-    height: 30,
-    width: 30,
-    marginTop: 50,
-    marginHorizontal: 12,
-  },
-
-  menuPrint: {
-    width:  Math.round(Dimensions.get('window').width),  
-    height: "100%",
-  },
-
-});
