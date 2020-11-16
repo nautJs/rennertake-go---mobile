@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const { Navigator, Screen } = createStackNavigator();
 
 import Header from '../components/Header/';
@@ -11,48 +12,45 @@ import QRcode from '../pages/QRcode';
 import Cart from '../pages/Cart/Cart';
 import Confirm from '../pages/Confirm';
 import Card from '../pages/Card/Card';
+import Home from '../components/Home';
+import TabNav from '../components/TabNav';
+
+
+const Tab = createBottomTabNavigator();
+
 
 export default function Routes() {
     return (
     <NavigationContainer>
       <Navigator>
           {/* <Screen name="Menu" component={Menu}/> */}
-          {/* <Screen
-              name="Menu"
-              component={TopBar}
-              options={{
-                headerShown: true,
-                header: () => <Header showCancel={false} title="Qr Code"/>
-              }}
-          /> */}
-          {/* <Screen
-              name="QRcode"
-              component={QRcode}
-              options={{
-                headerShown: true,
-                headerTransparent: true,
 
-                header: (e) => <Header headerTransparent={false} showCancel={false} title="QR Code"/>
-              }}
-          />*/}
           <Screen
-              name="Cart"
-              component={Cart}
+              name="Home"
+              component={TabNav}
               options={{
-                headerShown: true,
-                header: (e) => <Header headerTransparent={false} showCancel={true} title="Carrinho"/>
-              }}
-          />
-          <Screen
-              name="QRcode"
-              component={QRcode}
-              options={{
-                headerShown: true,
-                headerTransparent: true,
-                header: (e) => <Header headerTransparent={true} showCancel={false} title="QR Code"/>
+                headerShown: false,
               }}
           />
 
+          <Screen
+            name="QRcode"
+            component={QRcode}
+            options={{
+              headerShown: true,
+              headerTransparent: true,
+              header: (e) => <Header headerTransparent={true} showCancel={false} title="QR Code"/>
+            }}
+          />
+
+          <Screen
+            name="Cart"
+            component={Cart}
+            options={{
+              headerShown: true,
+              header: (e) => <Header headerTransparent={false} showCancel={true} title="Carrinho"/>
+            }}
+          />
 
 
           <Screen
