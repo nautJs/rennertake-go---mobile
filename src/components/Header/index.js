@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 export default function Header({ title, showCancel = true, headerTransparent = false}) {
     const navigation = useNavigation();
     function handleGoBackToAppHomepage() {
-        navigation.navigate('HomePage');
+        navigation.navigate('QRcode');
     }
     return (
         <View style={{ ...styles.container, backgroundColor: !headerTransparent && '#f9fafc'} }>

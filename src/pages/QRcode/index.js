@@ -9,14 +9,14 @@ import { styles } from './styles';
 const QRcode = () => {
 
   return(
-    <SafeAreaView style={styles.Container}>
-      <View style={styles.ContainerTitle}>
-        <Text style={styles.Title}>
-          Olá, <Text style={styles.Strong}>Matt!</Text>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.containerTitle}>
+        <Text style={styles.title}>
+          Olá, <Text style={styles.strong}>Matt!</Text>
         </Text>
       </View>
 
-      <View style={styles.ContainerQRCODE}>
+      <View style={styles.containerQRCODE}>
         <QRCode
           content="MATT"
           innerEyeStyle="circle"
@@ -25,17 +25,17 @@ const QRcode = () => {
           size={330}
           logo={require('../../assets/img/logoRenner.png')}
         />
-        <Text style={styles.TextQRCODE}>Encoste o QR code no scanner</Text>
+        <Text style={styles.textQRCODE}>Encoste o QR code no scanner</Text>
       </View>
 
-      <View style={styles.ContainerLocal}>
-        <View style={styles.ContentLocal}>
+      <View style={styles.containerLocal}>
+        <View style={styles.contentLocal}>
           <Image
-            style={styles.IconShopping}
+            style={styles.iconShopping}
             resizeMode="contain"
             source={require('../../assets/img/shopping.png')}
           />
-          <Text style={styles.TextLocal}>Shopping Palladium</Text>
+          <Text style={styles.textLocal}>Shopping Palladium</Text>
         </View>
       </View>
 

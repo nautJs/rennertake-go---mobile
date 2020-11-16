@@ -13,27 +13,27 @@ export default function EmptyCart() {
 
     return(
 
-        <SafeAreaView style={stylesNotItem.Container}>
-        <View style={stylesNotItem.ContainerText}>
+        <SafeAreaView style={stylesNotItem.container}>
+        <View style={stylesNotItem.containerText}>
         <Image
           style={stylesNotItem.img}
           source={require('../../assets/img/creditcard.png')}
         />
-          <Text style={stylesNotItem.Text}>
+          <Text style={stylesNotItem.text}>
             Obrigado por comprar com a Renner!
           </Text>
 
           <TouchableOpacity
-            style={stylesNotItem.ContainerButton}
+            style={stylesNotItem.containerButton}
           >
-            <Text style={stylesNotItem.TextButton}>
+            <Text style={stylesNotItem.textButton}>
               Voltar para o início
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            style={stylesNotItem.ContainerButton}
+            style={stylesNotItem.containerButton}
           >
-            <Text style={stylesNotItem.TextButton}>
+            <Text style={stylesNotItem.textButton}>
               Ver recibo
             </Text>
           </TouchableOpacity>
