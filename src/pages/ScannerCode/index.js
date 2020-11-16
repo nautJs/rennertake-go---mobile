@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,  Dimensions } from 'react-native';
+
+import { useNavigation } from '@react-navigation/native';
 
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
@@ -10,6 +12,13 @@ const ScannerCode = () => {
   const [scanned, setScanned] = useState(false);
   const [hasPermission, setHasPermission] = useState(null);
 
+
+  const navigation = useNavigation();
+
+  function handleToCart() {
+    navigation.navigate('Cart')
+  }
+
   useEffect(() => {
     (async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
@@ -17,9 +26,14 @@ const ScannerCode = () => {
     })();
   }, []);
 
+  useEffect(() => {
+    if(scanned){
+      handleToCart();
+    }
+  }, [scanned]);
+
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
-    alert(`Código de barras com tipo ${type} e dados ${data} foi escaneado!`);
   };
 
 
@@ -35,17 +49,13 @@ const ScannerCode = () => {
     <View style={styles.Container}>
       <BarCodeScanner
         onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-        style={{
-          flex: 1,
-        }}
-      />
+        style={[StyleSheet.absoluteFill, {
+          padding: 0,
+          margin: 0,
+          backgroundColor: '#000',
+        }]}
 
-      {scanned &&
-        <Button
-          title={'Toque para digitalizar novamente'}
-          onPress={() => setScanned(false)}
-        />
-      }
+      />
     </View>
   );
 };
