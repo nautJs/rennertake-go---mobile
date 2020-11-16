@@ -1,4 +1,3 @@
-import { preventAutoHide } from 'expo-splash-screen';
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, Dimensions, SafeAreaView, TouchableOpacity} from 'react-native';
 
@@ -8,19 +7,19 @@ export default function Home() {
     <SafeAreaView style={styles.container}>
 
        <View >
-      <TouchableOpacity>
-        <ImageBackground
-        resizeMode="contain"
-        style={styles.box1}
-        source={require('../../assets/img/Home.png')}
-        >
-        </ImageBackground>
-      </TouchableOpacity>
+        <TouchableOpacity>
+          <ImageBackground
+          resizeMode="contain"
+          style={styles.box1}
+          source={require('../../assets/img/Home.png')}
+          >
+          </ImageBackground>
+        </TouchableOpacity>
        </View>
 
-       
+
     </SafeAreaView>
-    
+
   );
 }
 
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
   },
 
   box1:{
-    width:  Math.round(Dimensions.get('window').width),  
+    width:  Math.round(Dimensions.get('window').width),
     height: "100%",
   },
 

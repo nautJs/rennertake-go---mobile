@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import TopBar from '../TopBar';
-import ScannerCode from '../../pages/ScannerCode';
+import Home from '../Home';
 
 function BlogScreen() {
   return (
@@ -33,9 +33,9 @@ function SettingsScreen() {
 const Tab = createBottomTabNavigator();
 
 export default function TabNav() {
-  
+
   return (
-    <NavigationContainer>
+    <>
       <Tab.Navigator
       tabBarOptions={{
         activeTintColor: '#000',
@@ -43,16 +43,16 @@ export default function TabNav() {
       }}
       >
         <Tab.Screen
-         name="Lorja Virtual"
-        component={SettingsScreen}
+         name="Loja Virtual"
+        component={Home}
         options={{
           tabBarIcon: ({ color }) => (
             <Image
-              source={require('../../assets/img/Sacola_icon.png')                  
+              source={require('../../assets/img/Sacola_icon.png')
               }/>
-         ),             
-        }} 
-          
+         ),
+        }}
+
         />
 
         <Tab.Screen
@@ -61,11 +61,11 @@ export default function TabNav() {
         options={{
           tabBarIcon: ({ color }) => (
             <Image
-              source={require('../../assets/img/Blog.png')                  
+              source={require('../../assets/img/Blog.png')
               }/>
-         ),             
-        }} 
-          
+         ),
+        }}
+
         />
 
         <Tab.Screen
@@ -74,11 +74,11 @@ export default function TabNav() {
         options={{
           tabBarIcon: ({ color }) => (
             <Image
-              source={require('../../assets/img/Search.png')                  
+              source={require('../../assets/img/Search.png')
               }/>
-         ),             
-        }} 
-          
+         ),
+        }}
+
         />
 
         <Tab.Screen
@@ -87,11 +87,11 @@ export default function TabNav() {
         options={{
           tabBarIcon: ({ color }) => (
             <Image
-              source={require('../../assets/img/Card.png')                  
+              source={require('../../assets/img/Card.png')
               }/>
-         ),             
-        }} 
-          
+         ),
+        }}
+
         />
 
         <Tab.Screen
@@ -100,13 +100,13 @@ export default function TabNav() {
          options={{
           tabBarIcon: ({ color }) => (
             <Image
-              source={require('../../assets/img/Menu.png')                  
+              source={require('../../assets/img/Menu.png')
               }/>
-         ),             
-        }} 
+         ),
+        }}
          />
 
       </Tab.Navigator>
-    </NavigationContainer>
+    </>
   );
 }

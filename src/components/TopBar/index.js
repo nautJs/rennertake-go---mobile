@@ -1,26 +1,36 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, Dimensions, SafeAreaView} from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View, ImageBackground, Dimensions, SafeAreaView} from 'react-native';
 
+import QRcode from '../../pages/QRcode';
+
+import { useNavigation } from '@react-navigation/native';
 
 export default function TopBar() {
+
+  const navigation = useNavigation();
+
+  function handleNavigateToQR() {
+    navigation.navigate('QRcode')
+  }
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.navIcon}>
-       <ImageBackground 
-       style={styles.icon}
-       source={require('../../assets/img/QR.png')}
-       >
-       </ImageBackground>
-
-       <ImageBackground 
-       resizeMode="contain" 
+        <TouchableOpacity onPress={() => handleNavigateToQR()}>
+          <ImageBackground
+          style={styles.icon}
+          source={require('../../assets/img/QR.png')}
+          >
+          </ImageBackground>
+        </TouchableOpacity>
+       <ImageBackground
+       resizeMode="contain"
        style={styles.icon}
        source={require('../../assets/img/Heart.png')}
        >
        </ImageBackground>
 
        <ImageBackground
-       resizeMode="contain" 
+       resizeMode="contain"
        style={styles.icon}
        source={require('../../assets/img/Sacola.png')}
        >
@@ -38,9 +48,9 @@ export default function TopBar() {
         </ImageBackground>
 
        </View>
-       
+
     </SafeAreaView>
-    
+
   );
 }
 
@@ -65,7 +75,7 @@ const styles = StyleSheet.create({
   },
 
   menuPrint: {
-    width:  Math.round(Dimensions.get('window').width),  
+    width:  Math.round(Dimensions.get('window').width),
     height: "100%",
   },
 
